@@ -1,0 +1,56 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="static/theme.css">
+</head>
+<body>
+<title>Movie Critic Bot</title>
+<div class="lang">
+<p class="lang"><a href="\en_generate">English</a> | <a href="\es_generate">Español</a>
+</div>
+<div class="main">
+<h1>Movie Critic Bot</h1>
+<p class="pred_gen"><a href="\en_predict">Predict</a> | <a href="\en_generate">Generate</a></p>
+<p>Enter or write a movie review and our critic will decide if it is negative or positive!</p>
+{{ form.csrf }}
+<form action="" method="post">
+<div class="input submit">	   
+<input type="text" class="form-control" id="name" name="name" 
+placeholder="">
+<div class="input-submit"><input type="submit" value="Go"></div>
+</form>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for message in messages %}
+{{ message[1] }}
+{% endfor %}
+{% endif %}
+{% endwith %}
+</div>
+<div class="note">
+<div class="about"><h2>About Movie Critic Bot</h2></div>
+<div class="note-left">
+<h3>The app </h3>
+<p><strong>Movie Critic Bot</strong> can do two things:</p>
+<ul>
+<li>Predict the sentiment of movie reviews</li>
+<li>Generate movie reviews</li>
+</ul>
+<h3>Sentiment prediction</h3>
+<p>The prediction function implements a scikit-learn classifier.</p>
+<h3>Text generation</h3>
+<p>
+The generation function is an implementation of <a href="https://github.com/minimaxir/textgenrnn">textgenrnn</a>, a Python library for Natural Language Generation</p>
+</div>
+<div class="note-right">
+<h3> The data </h3>
+<p>This bot was trained with 5,000 negative and positive reviews from IMDb.</p>
+<h3> The code </h3>
+<p><a href="https://github.com/luismond/MovieCriticBot">Github project</a> </p>
+<h3> The author </h3>
+<p>Luis Mondragón, linguist and developer.</p> 
+<p>Contact me on <a href="https://www.linkedin.com/in/luismondragon/">LinkedIn</a></p>
+</div>
+</div>
+</body>
+</html>
