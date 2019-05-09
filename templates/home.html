@@ -1,0 +1,59 @@
+<head>
+  <style type = text/css>
+  div.main {text-align: center;margin-bottom:80px;font-family:Verdana;margin-left:15%;margin-right:15%}
+  div.note {text-align: center;font-size: .7em;margin-left:15%;margin-right:15%;font-family:Verdana}
+  input.neg {background-color:#FF8A8A; font-size:18px;}
+  input.pos {background-color:#A4E1FF; font-size:18px;}
+  div.phrase_neg {margin-top:8px;margin-left:15%;margin-right:15%;background-color:#FF8A8A;padding:3px;}
+  div.phrase_pos {margin-top:8px;margin-left:15%;margin-right:15%;background-color:#A4E1FF;padding:3px;}
+  div.boxes {margin:3%;font-size:.6em}
+  div.input {}
+  </style>
+</head>
+
+<title>Movie Critic Bot</title>
+
+<div class="main">
+<h1>Movie Critic Bot</h1>
+<p>Press a button to get a positive or a negative movie opinion from our critic!</p>
+
+{{ form.csrf }}
+<form action="" method="post">  
+
+<div class="boxes">
+<input type="checkbox" name="English" value="en">English
+<input type="checkbox" name="Spanish" value="es">Spanish
+</div>
+ 
+<div class="input submit">
+<input type="submit" class='neg' name="submit_button" value="Negative">
+<input type="submit" class='pos' name="submit_button" value="Positive"></div>
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for message in messages %}
+{{ message[1] }}
+{% endfor %}
+{% endif %}
+{% endwith %}
+</div>
+
+
+<div class="note">
+<h2>About</h2>
+<p>
+This demo is an implementation of <a href="https://github.com/minimaxir/textgenrnn">textgenrnn</a>, a Python library for Natural Language Generation</p>
+
+<p>I trained this generator with a dataset containing 5,000 negative and positive reviews from the Internet Movie Database</p>
+
+<p>You can check out the Google Colab Notebook that was used for training <a href="https://colab.research.google.com/drive/1vCk9GFElXwgztsuLiYC7O14Rj_Ays4Nb">here</a><p>
+<p>Author: Luis Mondragón. Contact me on <a href="https://www.linkedin.com/in/luismondragon/">LinkedIn</a></p>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
+
+</div>
+
+
+

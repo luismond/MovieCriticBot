@@ -1,0 +1,8 @@
+IMDb Spanish Pos Log
+
+5/8/2019
+
+#TRACK LOSS
+
+#run 1: first epoch: 1.50 final epoch(92):.84 
+#run 2: first epoch:  .80 final epoch(83): .56
