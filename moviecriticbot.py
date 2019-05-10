@@ -166,7 +166,7 @@ def predict_es():
         name=request.form['name']
         if form.validate():
             if len(name)>30:
-                pred = clf_en.predict(vectorizer_en.transform([name]))
+                pred = clf_es.predict(vectorizer_en.transform([name]))
                 if pred == 0:
                     snippet = get_snippet_pred('neg',name,'es')
                     flash(Markup(snippet))
