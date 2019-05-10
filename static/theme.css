@@ -1,0 +1,147 @@
+div.lang {
+	background-color:#000000;
+	padding: 5px 10px 5px 0;	
+	text-align: right;
+	font-family:Verdana;
+	/* border: 1px solid red */
+	}
+div.main {
+	text-align: center;
+	padding-bottom:15px;
+	margin-bottom:20px;
+	font-family:Verdana;
+	/* border: 1px solid red */
+	}
+p.pred_gen {
+	margin: 4px 0 10 px 0;
+	/* border: 1px solid red */ 
+}
+h1 {
+	margin: 6px 0 2px 0;
+	 /* border: 1px solid red */ 
+	}
+p.intro {
+	margin-left:5%;
+	margin-right:5%;
+	margin-bottom:3%;
+	/* border: 1px solid red */ 
+}
+
+div.input-box {
+
+	margin: 0 0 30px 0;
+	height:35px;
+}
+
+input.form-control {
+	width: 100%;
+
+}
+div.text-input {
+	width: 66%;
+	display: block;
+	float:left;
+	padding: 5px 0 5px 4%;
+	 /* border: 1px solid red */ 
+}
+div.input-submit {
+	width: 30%;
+	display:block;
+	float:right;
+	 /* border: 1px solid red */ 
+}
+input.go {
+	padding: 7px;
+	font-size:14px;
+	border-radius: 8px;
+	border: 2px solid #A4A4A4;
+	 /* border: 1px solid red */ 
+}
+
+div.message {
+	margin-top: 25px;
+	 /* border: 1px solid red */ 
+}
+
+
+div.note {
+	text-align: left;
+	font-size: .6em;
+	line-height: 1.9em;
+	left: 0;
+	width: 100%;
+	font-family:Verdana;
+	background-color:#EFEFEF;
+	padding: 5px 0 20px 0;
+	border-top: 1px solid #C7C7C7;
+	position: absolute;
+	 /* border: 1px solid red */ 
+	}
+div.note-left {
+	width:47%;
+	display:block;
+	float:left;
+	background-color:#FCFCFC;
+	margin: 0 0 0 2%;
+	 /* border: 1px solid red */ 
+}
+div.note-right {
+	width:47%;
+	float:right;
+	display:block;
+	background-color:#FCFCFC;
+	margin: 0 2% 0 0;
+	/* border: 1px solid red */
+}
+
+div.input {
+margin: 10px 0 18px 0;
+}
+
+input.neg {
+	background-color:#FF8A8A;
+	font-size:18px;
+	padding: 7px;
+	border: 3px solid #E47979;
+	border-radius: 12px
+	}
+input.pos {
+	background-color:#A4E1FF;
+	font-size:18px;
+	padding: 7px;
+	border: 3px solid #7AAFCA;
+	border-radius: 12px
+	}
+	
+div.phrase_neg {
+margin: 10px;
+background-color:#FFDEDE;
+padding:8px;
+}
+div.phrase_pos {
+margin: 10px;
+background-color:#E5F7FF;
+padding:8px;
+}
+
+
+a:visited {
+	color: #F4BE3D
+}
+
+a {
+	color: #F4BE3D
+}
+
+div.about {
+	text-align:center
+}
+p {
+	margin: 2px 15px 10px 20px;
+}
+h3 {
+	margin: 10px 0 10px 10px;
+}
+
+h1 {
+margin: 2px 0 5px 0}
