@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="static/theme.css">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
 <title>Movie Critic Bot</title>
 <div class="lang">
-<p class="lang"><a href="\en_generate">English</a> | <a href="\es_generate">Español</a>
+<a href="\en_generate">English</a> | <a href="\es_generate">Español</a>
 </div>
 <div class="main">
 <h1>Movie Critic Bot</h1>
 <p class="pred_gen"><a href="\es_predict">Predecir</a> | <a href="\es_generate">Generar</a></p>
-<p>¡Presiona un botón para obtener una opinión negativa o positiva de nuestro crítico!</p>
+<p class="intro">¡Presiona un botón para obtener una opinión negativa o positiva de nuestro crítico!</p>
 {{ form.csrf }}
-<form action="" method="post">  
+<form action="" method="post">
 <div class="input submit">
 <input type="submit" class='neg' name="submit_button" value="Negativa">
 <input type="submit" class='pos' name="submit_button" value="Positiva"></div>
 </form>
+<div class="message">
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
 {% for message in messages %}
@@ -27,6 +27,7 @@
 {% endfor %}
 {% endif %}
 {% endwith %}
+</div>
 </div>
 <div class="note">
 <div class="about"><h2>Acerca de Movie Critic Bot</h2></div>
@@ -41,7 +42,7 @@
 <p>La función de predicción implementa un clasificador basado en scikit-learn.</p>
 <h3>Generación de texto</h3>
 <p>
-La función de generación de texto es una implementación de <a href="https://github.com/minimaxir/textgenrnn">textgenrnn</a>, una librería de Python para la generación de secuencias de caracteres.</p>
+La función de generación de texto implementa <a href="https://github.com/minimaxir/textgenrnn">textgenrnn</a>, una librería de Python para la generación de texto.</p>
 </div>
 <div class="note-right">
 <h3> Los datos </h3>
@@ -54,4 +55,3 @@ La función de generación de texto es una implementación de <a href="https://g
 </div>
 </div>
 </body>
-</html>

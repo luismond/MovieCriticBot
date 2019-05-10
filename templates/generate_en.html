@@ -2,22 +2,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="static/theme.css">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
 <title>Movie Critic Bot</title>
 <div class="lang">
-<p class="lang"><a href="\en_generate">English</a> | <a href="\es_generate">Español</a>
+<a href="\en_generate">English</a> | <a href="\es_generate">Español</a>
 </div>
 <div class="main">
 <h1>Movie Critic Bot</h1>
 <p class="pred_gen"><a href="\en_predict">Predict</a> | <a href="\en_generate">Generate</a></p>
-<p>Press a button to get a positive or a negative movie opinion from our critic!</p>
+<p class="intro">Press a button to get a positive or a negative movie opinion from our critic!</p>
 {{ form.csrf }}
 <form action="" method="post">  
 <div class="input submit">
 <input type="submit" class='neg' name="submit_button" value="Negative">
 <input type="submit" class='pos' name="submit_button" value="Positive"></div>
 </form>
+<div class="message">
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
 {% for message in messages %}
@@ -25,6 +27,7 @@
 {% endfor %}
 {% endif %}
 {% endwith %}
+</div>
 </div>
 <div class="note">
 <div class="about"><h2>About Movie Critic Bot</h2></div>
@@ -39,7 +42,7 @@
 <p>The prediction function implements a scikit-learn classifier.</p>
 <h3>Text generation</h3>
 <p>
-The generation function is an implementation of <a href="https://github.com/minimaxir/textgenrnn">textgenrnn</a>, a Python library for Natural Language Generation</p>
+The generation function implements <a href="https://github.com/minimaxir/textgenrnn">textgenrnn</a>, a Python library for text generation.</p>
 </div>
 <div class="note-right">
 <h3> The data </h3>
@@ -52,4 +55,3 @@ The generation function is an implementation of <a href="https://github.com/mini
 </div>
 </div>
 </body>
-</html>
