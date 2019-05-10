@@ -42,7 +42,7 @@ def generate_phrases(sent,lang):
     temperature = [0.4,0.2]
     prefix = ''
     phrase = textgen.generate(temperature=temperature,n=1,
-                         max_gen_length=150,prefix=prefix,return_as_list=True)
+                         max_gen_length=90,prefix=prefix,return_as_list=True)
     #After prediction
     K.clear_session()
     return phrase
@@ -60,7 +60,7 @@ def get_snippet(lang,sent):
     if sent == 'pos':
         bot = 'Robot-60-TopHat-A_s.png'
     phrase = generate_phrases(sent,lang)[0]
-    snippet = """<img src="static\{}"></img><div class="phrase_{}">{}</div>""".format(bot,sent,phrase)
+    snippet = """<div class="phrase_{}">{}</div><img src="static\{}"></img>""".format(sent,phrase,bot)
     return snippet
 
 
@@ -77,7 +77,7 @@ def get_snippet_pred(sent,name,lang):
             phrase = 'This review is positive!'
         if lang == 'es':
             phrase = '¡Esta opinión es positiva!'
-    snippet = """<p>{}</p></br><img src="static\{}"></img><div class="phrase_{}">{}</div>""".format(name,bot,sent,phrase)
+    snippet = """<div class="phrase_{}">{}</div></br><img src="static\{}"></img><div>{}</div>""".format(sent,name,bot,phrase)
     return snippet
 
 
